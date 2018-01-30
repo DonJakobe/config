@@ -1,0 +1,8 @@
+[Unit]
+Description=wakeup
+
+[Service]
+ExecStart=/bin/bash -c "echo XHC >> /proc/acpi/wakeup"
+
+[Install]
+WantedBy=multi-user.target
