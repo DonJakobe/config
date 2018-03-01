@@ -6,6 +6,15 @@ set number
 set relativenumber
 set wrap lbr
 
+set expandtab
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+
 set spelllang=en
 
 set noerrorbells visualbell t_vb=
@@ -26,10 +35,15 @@ imap <right> <nop>
 imap <PageUp> <nop>
 imap <Pagedown> <nop>
 
-
-
+" move between windows
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 autocmd FileType sh inoremap <b #!/bin/bash<Enter>
+
+autocmd FileType * inoremap <f printf("FOOOOOOOOO!\n");
 
 autocmd FileType tex inoremap <Space><Space> <Esc>/<+><Enter>"_c3l
 autocmd FileType tex inoremap <<Space> <+>

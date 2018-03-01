@@ -199,4 +199,4 @@ mode "$mode_rotation" {
 }
 bindsym $mod+o mode "$mode_rotation"
 
-exec_always feh --bg-fill ~/pictures/wallpapers/falcon9landing2.jpg
+exec_always feh --bg-fill ~/pictures/wallpapers/falconheavy.jpg
