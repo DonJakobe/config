@@ -1,0 +1,18 @@
+!! magenta
+*color5: #6666ea
+*color13: #6666ea
+
+URxvt.font: xft:Fira Mono:size=16
+URxvt.transparent: true
+URxvt.shading: 30
+
+URxvt.background: #000000
+URxvt.foreground: #FFFFFF
+URxvt.scrollBar: false
+Rxvt.cursorColor: magenta
+
+URxvt.perl-ext-common: resize-font
+
+!! resize-font
+URxvt.keysym.C-j: resize-font:smaller
+URxvt.keysym.C-k: resize-font:bigger
