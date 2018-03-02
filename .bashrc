@@ -15,6 +15,7 @@ alias disp='xrandr --auto --output eDP1 --right-of HDMI2'
 alias nodisp='xrandr --output HDMI2 --off'
 alias beam='xrandr --auto --output eDP1 --same-as HDMI2 '
 alias m='mupdf' 
+alias ebash='shopt -s extglob'
 
 alias enzo='ssh -t enzo "cd /data/jstaab/ ; bash"'
 

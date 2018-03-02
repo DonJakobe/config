@@ -22,6 +22,9 @@ font pango:Fira Mono 14
 # clear in small sizes. However, its unicode glyph coverage is limited, the old
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
+# 
+# AUTOSTART
+exec --no-startup-id i3-msg 'workspace 1; exec firefox; workspace 2; exec urxvt; workspace 9; exec thunderbird; workspace 1'
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
