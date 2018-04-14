@@ -43,10 +43,10 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+#bindsym $mod+j focus left
+#bindsym $mod+k focus down
+#bindsym $mod+l focus up
+#bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -55,10 +55,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+#bindsym $mod+Shift+j move left
+#bindsym $mod+Shift+k move down
+#bindsym $mod+Shift+l move up
+#bindsym $mod+Shift+semicolon move right
 
 # move workspace to different output/monitor
 bindsym $mod+m move workspace to output right
@@ -179,6 +179,8 @@ bindsym $mod+Escape mode "$mode_system"
 
 ### CUSTOM
 bindsym $mod+x exec firefox
+bindsym $mod+k exec ~/.scripts/keymapctl
+bindsym $mod+Shift+d exec ~/.scripts/displayctl
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -186,8 +188,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #d
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec ~/.config/i3/backlightctl.sh inc # increase screen brightness
-bindsym XF86MonBrightnessDown exec ~/.config/i3/backlightctl.sh dec # decrease screen brightness
+bindsym XF86MonBrightnessUp exec ~/.scripts/backlightctl inc # increase screen brightness
+bindsym XF86MonBrightnessDown exec ~/.scripts/backlightctl dec # decrease screen brightness
 # Screen rotation
 
 mode "$mode_rotation" {

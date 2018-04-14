@@ -6,9 +6,11 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+export PATH=$PATH:~/.scripts
+
 alias ls='ls --color=auto'
 alias cd..='cd ..'
-alias l='ls -la'
+alias l='ls -lah'
 alias v='vim'
 alias um='udiskie-umount'
 alias disp='xrandr --auto --output eDP1 --right-of HDMI2'
@@ -16,6 +18,7 @@ alias nodisp='xrandr --output HDMI2 --off'
 alias beam='xrandr --auto --output eDP1 --same-as HDMI2 '
 alias m='mupdf' 
 alias ebash='shopt -s extglob'
+alias R='R --no-save'
 
 alias enzo='ssh -t enzo "cd /data/jstaab/ ; bash"'
 

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+choices="default\nleft\nright\nbeamer\nextern"
+
+chosen=$(echo -e $choices | dmenu -i)
+
+case "$chosen" in
+    default) xrandr --output eDP1 --auto --output HDMI2 --off ;;
+    left) xrandr --output eDP1 --auto --output HDMI2 --auto --left-of eDP1 ;;
+    right) xrandr --output eDP1 --auto --output HDMI2 --auto --right-of eDP1 ;;
+    beamer) xrandr --output HDMI2 --auto --same-as eDP1 ;;
+    extern) xrandr --output eDP1 --off --output HDMI2 --auto ;;
+esac
+

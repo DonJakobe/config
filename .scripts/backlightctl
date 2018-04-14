@@ -1,0 +1,24 @@
+#!/bin/bash
+
+value=$(printf "%.0f" $(xbacklight -get))
+step=20 # multiple of 100
+
+if [[ $1 == "dec" ]]
+then
+    if [[ $value -le step ]]
+    then
+        xbacklight -set 1
+    else
+        xbacklight -set $((value - step))
+    fi
+
+elif [[ $1 == "inc" ]]
+then
+    if [[ $value -lt step ]]
+    then
+        xbacklight -set $step
+        echo $value
+    else
+        xbacklight -set $((value + step))
+    fi
+fi

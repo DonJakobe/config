@@ -1,0 +1,11 @@
+#!/bin/bash
+
+choices="DE\nSE"
+
+chosen=$(echo -e $choices | dmenu -i)
+
+case "$chosen" in
+    DE) setxkbmap de ;;
+    SE) setxkbmap se ;;
+esac
+
