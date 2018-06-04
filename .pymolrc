@@ -1,1 +1,2 @@
 set defer_builds_mode, 3
+set label_distance_digits, 4

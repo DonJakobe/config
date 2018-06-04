@@ -16,6 +16,7 @@ set foldmethod=indent
 set foldlevel=99
 
 set spelllang=en
+set clipboard=unnamedplus
 
 set noerrorbells visualbell t_vb=
 
@@ -24,16 +25,16 @@ set noerrorbells visualbell t_vb=
 "map <down> <nop>
 "map <left> <nop>
 "map <right> <nop>
-"map <PageUp> <nop>
-"map <Pagedown> <nop>
+map <PageUp> <nop>
+map <Pagedown> <nop>
 
 " Disable Arrow keys in Insert mode
 "imap <up> <nop>
 "imap <down> <nop>
 "imap <left> <nop>
 "imap <right> <nop>
-"imap <PageUp> <nop>
-"imap <Pagedown> <nop>
+imap <PageUp> <nop>
+imap <Pagedown> <nop>
 
 " move between windows
 nnoremap <C-J> <C-W><C-J>
@@ -46,29 +47,32 @@ autocmd FileType sh inoremap <b #!/bin/bash<Enter>
 autocmd FileType h inoremap <f printf("FOOOOOOOOO!\n");
 autocmd FileType c inoremap <f printf("FOOOOOOOOO!\n");
 
-autocmd FileType tex inoremap <Space><Space> <Esc>/<+><Enter>"_c3l
-autocmd FileType tex inoremap <<Space> <+>
+autocmd FileType *tex,rmd inoremap <Space><Space> <Esc>/<+><Enter>"_c3l
+autocmd FileType *tex,rmd inoremap <<Space> <+>
 
-autocmd FileType tex set spell 
+autocmd FileType *tex set spell 
 
-autocmd FileType tex inoremap <ti \textit{}<Space><+><Esc>T{i
-autocmd FileType tex inoremap <tb \textbf{}<Space><+><Esc>T{i
-autocmd FileType tex inoremap <tt \tex{}<Space><+><Esc>T{i
-autocmd FileType tex inoremap <rm \mathrm{}<Space><+><Esc>T{i
+autocmd FileType *tex inoremap <ti \textit{}<Space><+><Esc>T{i
+autocmd FileType *tex inoremap <tb \textbf{}<Space><+><Esc>T{i
+autocmd FileType *tex inoremap <tt \texttt{}<Space><+><Esc>T{i
+autocmd FileType *tex inoremap <mr \mathrm{}<Space><+><Esc>T{i
+autocmd FileType *tex inoremap <mi \mathit{}<Space><+><Esc>T{i
 
-autocmd FileType tex inoremap <q \glqq<Space>\grqq{}<Space><+><Esc>F\i
-
-
-autocmd FileType tex inoremap <e \begin{equation}<Enter><Esc>d0i\end{equation}<Esc>k<End>A<Enter>
-autocmd FileType tex inoremap <a \begin{align}<Enter><Esc>d0i\end{align}<Esc>k<End>A<Enter>
-autocmd FileType tex inoremap <fi \begin{figure}[H]<Enter>\centering<Enter>\includegraphics[width=<+>\textwidth]{<+>}<Enter>\caption{<+>}<Enter>\label{<+>}<Enter><Esc>d0i\end{figure}<Space><+><Esc>kkkki
-autocmd FileType tex inoremap <t \begin{table}[H]<Enter>\centering<Enter>\caption{<+>}<Enter>\begin{tabular}{<+>}<Enter>\toprule<Enter>\midrule<Enter>\bottomrule<Enter>\end{tabular}<Enter>\label{<+>}<Enter><Esc>d0i\end{table}<Esc>kkkkkkkkkkki
-autocmd FileType tex inoremap <expr> <b "\\begin{" . input("") . "<Esc>yiwA}<Enter><Backspace>\\end{<Esc>pA}<Enter><Esc>kkA<Enter>"
-autocmd FileType tex inoremap <c \begin{columns}<Enter><Esc>d0i\end{columns}<Esc>k<End>A<Enter>\column{}<Esc>i
-autocmd FileType tex inoremap <i \begin{itemize}<Enter><Esc>d0i\end{itemize}<Esc>k<End>A<Enter>\item<Space>
+autocmd FileType *tex inoremap <q \glqq<Space>\grqq{}<Space><+><Esc>F\i
 
 
-autocmd FileType tex inoremap <fr \begin{frame}<Enter><Esc>d0i\end{frame}<Esc>k<End>A<Enter>
+autocmd FileType *tex inoremap <eq \begin{equation}<Enter><Esc>d0i\end{equation}<Esc>k<End>A<Enter>
+autocmd FileType *tex inoremap <al \begin{align}<Enter><Esc>d0i\end{align}<Esc>k<End>A<Enter>
+autocmd FileType *tex inoremap <ag \begin{algorithm}<Enter><Esc>d0i\end{algorithm}<Esc>k<End>A<Enter>
+autocmd FileType *tex inoremap <fi \begin{figure}[H]<Enter>\centering<Enter>\includegraphics[width=<+>\textwidth]{<+>}<Enter>\caption{<+>}<Enter>\label{<+>}<Enter><Esc>d0i\end{figure}<Space><+><Esc>kkkki
+autocmd FileType *tex inoremap <t \begin{table}[H]<Enter>\centering<Enter>\caption{<+>}<Enter>\begin{tabular}{<+>}<Enter>\toprule<Enter>\midrule<Enter>\bottomrule<Enter>\end{tabular}<Enter>\label{<+>}<Enter><Esc>d0i\end{table}<Esc>kkkkkkkkkkki
+autocmd FileType *tex inoremap <expr> <b "\\begin{" . input("") . "<Esc>yiwA}<Enter><Backspace>\\end{<Esc>pA}<Enter><Esc>kkA<Enter>"
+autocmd FileType *tex inoremap <c \begin{columns}<Enter><Esc>d0i\end{columns}<Esc>k<End>A<Enter>\column{}<Esc>i
+autocmd FileType *tex inoremap <i \begin{itemize}<Enter><Esc>d0i\end{itemize}<Esc>k<End>A<Enter>\item<Space>
+
+autocmd FileType *tex inoremap <fr \begin{frame}<Enter><Esc>d0i\end{frame}<Esc>k<End>A<Enter>
+
+autocmd FileType *rmd inoremap <rm ---<Enter>title:<Enter>author:<Space>Jakob<Space>Staab<Enter>output:<Space>pdf_document<Enter>---<Enter><+><Esc>?title<Enter>A<Space>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "IDE settings
