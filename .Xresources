@@ -4,7 +4,7 @@
 
 URxvt.font: xft:Fira Mono:size=16
 URxvt.transparent: true
-URxvt.shading: 30
+URxvt.shading: 20
 
 URxvt.background: #000000
 URxvt.foreground: #FFFFFF

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ -z "$2" ]; then
+    echo "no output file supplied, output will be named $1"
+    OUT=$1
+else
+    OUT=$2
+fi
+
+pdfcrop --margins 1 $1 timptamptemp.ps
+ps2pdf -dEmbedAllFonts=true timptamptemp.ps timptamptemp.pdf
+gs -q -dNOPAUSE -dBATCH -dPDFSETTINGS=/prepress -sDEVICE=pdfwrite -sOutputFile=$OUT timptamptemp.pdf
+rm timptamptemp.ps
+rm timptamptemp.pdf
