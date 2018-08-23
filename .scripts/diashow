@@ -1,0 +1,3 @@
+#!/bin/bash
+
+feh $2 --full-screen --auto-rotate --auto-zoom --slideshow-delay $1

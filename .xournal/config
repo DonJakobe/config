@@ -13,7 +13,7 @@ window_maximize=false
 # start in full screen mode (true/false)
 window_fullscreen=false
 # the window width in pixels (when not maximized)
-window_width=956
+window_width=1916
 # the window height in pixels
 window_height=1021
 # scrollbar step increment (in pixels)
@@ -90,7 +90,7 @@ height=792.00
 # the default paper color
 color=white
 # the default paper style (plain, lined, ruled, or graph)
-style=lined
+style=plain
 # apply paper style changes to all pages (true/false)
 apply_all=false
 # preferred unit (cm, in, px, pt)
