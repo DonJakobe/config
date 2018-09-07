@@ -5,6 +5,7 @@ set mouse=r
 set number
 set relativenumber
 set wrap lbr
+set clipboard=unnamedplus
 
 set expandtab
 set shiftwidth=4

@@ -181,6 +181,7 @@ bindsym $mod+Escape mode "$mode_system"
 bindsym $mod+x exec firefox
 bindsym $mod+k exec ~/.scripts/keymapctl
 bindsym $mod+Shift+d exec ~/.scripts/displayctl
+bindsym $mod+p exec ~/.scripts/stylus
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
