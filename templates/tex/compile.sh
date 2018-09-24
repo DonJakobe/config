@@ -1,7 +1,9 @@
 #!/bin/bash
 
-pdflatex thesis_jakob_staab20180514.tex
-biber thesis_jakob_staab20180514
-pdflatex thesis_jakob_staab20180514.tex
+NAME=$1
 
-mupdf thesis_jakob_staab20180514.pdf &
+pdflatex ${NAME}.tex
+biber ${NAME}
+pdflatex ${NAME}.tex
+
+mupdf ${NAME}.pdf &
