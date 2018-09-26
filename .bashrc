@@ -13,10 +13,15 @@ alias cd..='cd ..'
 alias l='ls -lah'
 alias v='vim'
 alias c='cat'
+#alias m='mupdf' 
+alias r='ranger'
 alias um='udiskie-umount'
-alias m='mupdf' 
 alias ebash='shopt -s extglob'
 alias R='R --no-save'
+
+function m() {
+    mupdf $1 &
+}
 
 function cd() {
     new_directory="$*";
