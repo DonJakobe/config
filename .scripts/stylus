@@ -1,0 +1,12 @@
+#!/bin/bash
+
+choices="default\ncw\nccw"
+
+chosen=$(echo -e $choices | dmenu -i)
+
+case "$chosen" in
+    default) xsetwacom set "Wacom ISDv4 EC Pen stylus" Rotate none & grox.rb normal ;;
+    cw) xsetwacom set "Wacom ISDv4 EC Pen stylus" Rotate cw & grox.rb right ;;
+    ccw) xsetwacom set "Wacom ISDv4 EC Pen stylus" Rotate ccw & grox.rb left ;;
+esac
+

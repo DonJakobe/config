@@ -1,0 +1,16 @@
+#!/bin/bash
+
+SUDO_ASKPASS=/home/jakob/.scripts/dpass sudo -A $(echo -e "netctl stop-all")
+
+choices="uppsala\neduroam\nnex5"
+
+chosen=$(echo -e $choices | dmenu -i)
+
+case "$chosen" in
+    uppsala) network=uppsala ;;
+    eduroam) network=eduroam_da ;;
+    nex5) network=nex5 ;;
+esac
+
+SUDO_ASKPASS=/home/jakob/.scripts/dpass sudo -A $(echo -e "netctl start $network")
+

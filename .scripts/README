@@ -2,3 +2,6 @@
 place in /etc/systemd/system/multi-user.target.wants/
 fix-usb-wakeup.service
 netctl-auto@wlp4s0.service
+
+place in /etc/systemd/system/
+lock-on-suspend.service
