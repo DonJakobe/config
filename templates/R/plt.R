@@ -5,7 +5,7 @@ library(cowplot)
 library(magick)
 
 theme_set(theme_classic(base_size = 20) +
-          theme(legend.title=element_blank(),
+          theme(#legend.title=element_blank(),
                 axis.title.y = element_text(face="bold", size=20),
                 axis.title.x = element_text(face="bold", size=20),
                 panel.background=element_rect(size=1, colour="black"),

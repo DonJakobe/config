@@ -8,7 +8,7 @@ chosen=$(echo -e $choices | dmenu -i)
 
 case "$chosen" in
     uppsala) network=uppsala ;;
-    eduroam) network=eduroam_da ;;
+    eduroam) network=eduroam ;;
     nex5) network=nex5 ;;
 esac
 

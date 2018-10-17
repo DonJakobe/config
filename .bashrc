@@ -8,6 +8,10 @@
 
 export PATH=$PATH:~/.scripts
 
+alias cdd='cd ~/Downloads'
+alias cdf='cd ~/files'
+alias cdp='cd ~/files/pictures'
+
 alias ls='ls --color=auto'
 alias cd..='cd ..'
 alias l='ls -lah'
@@ -20,7 +24,7 @@ alias ebash='shopt -s extglob'
 alias R='R --no-save'
 
 function m() {
-    mupdf $1 &
+    mupdf "$1" &
 }
 
 function cd() {

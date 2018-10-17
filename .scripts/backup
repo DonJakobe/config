@@ -5,6 +5,7 @@
 DATE=$(date -I)
 DIR=$1
 
-#tar -czf $1/thunderbird${DATE}.tar.gz ~/.thunderbird
-tar -czf $1/files${DATE}.tar.gz ~/files
+tar -czf $1/thunderbird${DATE}.tar.gz ~/.thunderbird
+tar -czf $1/mozilla${DATE}.tar.gz ~/.mozilla
+#tar -czf $1/files${DATE}.tar.gz ~/files
 
