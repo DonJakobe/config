@@ -48,6 +48,7 @@ autocmd FileType sh inoremap <b #!/bin/bash<Enter>
 autocmd FileType h inoremap <f printf("FOOOOOOOOO!\n");
 autocmd FileType c inoremap <f printf("FOOOOOOOOO!\n");
 
+command Jmp call feedkeys("/<+>\<CR>\"_c3l")
 autocmd FileType *tex,rmd inoremap <Space><Space> <Esc>/<+><Enter>"_c3l
 autocmd FileType *tex,rmd inoremap <<Space> <+>
 
@@ -59,15 +60,23 @@ autocmd FileType *tex inoremap <tt \texttt{}<Space><+><Esc>T{i
 autocmd FileType *tex inoremap <mr \mathrm{}<Space><+><Esc>T{i
 autocmd FileType *tex inoremap <mi \mathit{}<Space><+><Esc>T{i
 
+autocmd FileType *tex nnoremap <ti bi\textit{<Esc>ea}<Esc>
+autocmd FileType *tex nnoremap <tb bi\textbf{<Esc>ea}<Esc>
+autocmd FileType *tex nnoremap <tt bi\texttt{<Esc>ea}<Esc>
+
 autocmd FileType *tex inoremap <q \glqq<Space>\grqq{}<Space><+><Esc>F\i
 
+autocmd FileType *tex inoremap <s \section{}<Enter><+><Esc>kt}a
+autocmd FileType *tex inoremap <ss \subsection{}<Enter><+><Esc>kt}a
+autocmd FileType *tex inoremap <sss \subsubsection{}<Enter><+><Esc>kt}a
+autocmd FileType *tex inoremap <p \paragraph{}<Enter><+><Esc>kt}a
 
 autocmd FileType *tex inoremap <eq \begin{equation}<Enter><Esc>d0i\end{equation}<Esc>k<End>A<Enter>
 autocmd FileType *tex inoremap <al \begin{align}<Enter><Esc>d0i\end{align}<Esc>k<End>A<Enter>
 autocmd FileType *tex inoremap <ag \begin{algorithm}<Enter><Esc>d0i\end{algorithm}<Esc>k<End>A<Enter>
-autocmd FileType *tex inoremap <fi \begin{figure}[H]<Enter>\centering<Enter>\includegraphics[width=<+>\textwidth]{<+>}<Enter>\caption{<+>}<Enter>\label{<+>}<Enter><Esc>d0i\end{figure}<Space><+><Esc>kkkki
-autocmd FileType *tex inoremap <t \begin{table}[H]<Enter>\centering<Enter>\caption{<+>}<Enter>\begin{tabular}{<+>}<Enter>\toprule<Enter>\midrule<Enter>\bottomrule<Enter>\end{tabular}<Enter>\label{<+>}<Enter><Esc>d0i\end{table}<Esc>kkkkkkkkkkki
-autocmd FileType *tex inoremap <expr> <b "\\begin{" . input("") . "<Esc>yiwA}<Enter><Backspace>\\end{<Esc>pA}<Enter><Esc>kkA<Enter>"
+autocmd Filetype *tex inoremap <fi <Esc>:-1read $HOME/templates/tex/snippets/figure<CR>:Jmp<CR>
+autocmd Filetype *tex inoremap <tb <Esc>:-1read $HOME/templates/tex/snippets/table<CR>:Jmp<CR>
+autocmd FileType *tex inoremap <expr> <b "\\begin{" . input("") . "<Esc>yiwA}<Enter>\\end{<Esc>pA}<Enter><Esc>kkA<Enter><Tab>"
 autocmd FileType *tex inoremap <c \begin{columns}<Enter><Esc>d0i\end{columns}<Esc>k<End>A<Enter>\column{}<Esc>i
 autocmd FileType *tex inoremap <i \begin{itemize}<Enter><Esc>d0i\end{itemize}<Esc>k<End>A<Enter>\item<Space>
 
