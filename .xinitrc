@@ -3,6 +3,9 @@
 # disable system bell
 xset -b
 
+# swap esc and caps lock
+setxkbmap -option caps:escape
+
 udiskie &
 
 userresources=$HOME/.Xresources

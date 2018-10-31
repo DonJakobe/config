@@ -17,14 +17,19 @@ alias cd..='cd ..'
 alias l='ls -lah'
 alias v='vim'
 alias c='cat'
-#alias m='mupdf' 
 alias r='ranger'
 alias um='udiskie-umount'
 alias ebash='shopt -s extglob'
 alias R='R --no-save'
 
 function m() {
-    mupdf "$1" &
+    if [[ $1 == *"pdf" ]]; then
+        mupdf "$1" &
+    elif [[ $1 == *"." ]]; then
+        mupdf "$1pdf" &
+    else
+        mupdf "$1.pdf" &
+    fi
 }
 
 function cd() {
@@ -37,6 +42,6 @@ function cd() {
 
 PS1='[\[\e[00;31m\]\u\[\e[00;32m\]@\[\e[00;34m\]\h\[\e[00;00m\]] \W\$ '
 
-source /usr/local/gromacs/bin/GMXRC
+#source /usr/local/gromacs/bin/GMXRC
 
 setxkbmap de

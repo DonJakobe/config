@@ -4,8 +4,12 @@ filetype plugin indent on
 set mouse=r
 set number
 set relativenumber
+set hlsearch
+set incsearch
 set wrap lbr
 set clipboard=unnamedplus
+set path+=**
+set wildmenu
 
 set expandtab
 set shiftwidth=4
@@ -22,10 +26,10 @@ set clipboard=unnamedplus
 set noerrorbells visualbell t_vb=
 
 " Disable Arrow keys in Escape mode
-"map <up> <nop>
-"map <down> <nop>
-"map <left> <nop>
-"map <right> <nop>
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
 map <PageUp> <nop>
 map <Pagedown> <nop>
 
