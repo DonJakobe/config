@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# enable vi mode in all GNU read line tools
+set editing-mode vi
+
 # disable system bell
 xset -b
 

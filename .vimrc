@@ -70,9 +70,9 @@ autocmd FileType *tex nnoremap <tt bi\texttt{<Esc>ea}<Esc>
 
 autocmd FileType *tex inoremap <q \glqq<Space>\grqq{}<Space><+><Esc>F\i
 
-autocmd FileType *tex inoremap <s \section{}<Enter><+><Esc>kt}a
-autocmd FileType *tex inoremap <ss \subsection{}<Enter><+><Esc>kt}a
-autocmd FileType *tex inoremap <sss \subsubsection{}<Enter><+><Esc>kt}a
+autocmd FileType *tex inoremap <sec \section{}<Enter><+><Esc>kt}a
+autocmd FileType *tex inoremap <ssec \subsection{}<Enter><+><Esc>kt}a
+autocmd FileType *tex inoremap <sssec \subsubsection{}<Enter><+><Esc>kt}a
 autocmd FileType *tex inoremap <p \paragraph{}<Enter><+><Esc>kt}a
 
 autocmd FileType *tex inoremap <eq \begin{equation}<Enter><Esc>d0i\end{equation}<Esc>k<End>A<Enter>
